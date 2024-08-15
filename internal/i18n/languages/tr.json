@@ -1,0 +1,10 @@
+{
+  "success": "Başarılı",
+  "unexpected_error": "Beklenmeyen bir hata oluştu",
+  "bad_request": "Geçersiz istek",
+  "not_found": "Bulunamadı",
+  "error_ticket_create": "Bilet oluşturulurken hata oluştu",
+  "error_ticket_update": "Bilet güncellenirken hata oluştu",
+  "error_purchase": "Bilet satın alırken hata oluştu",
+  "error_ticket_allocations": "Bilet tahsisleri alınırken hata oluştu"
+}

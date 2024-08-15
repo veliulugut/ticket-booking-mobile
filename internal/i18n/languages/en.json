@@ -1,0 +1,10 @@
+{
+  "success": "Success",
+  "unexpected_error": "An unexpected error occurred",
+  "bad_request": "Bad request",
+  "not_found": "Not found",
+  "error_ticket_create": "Error creating ticket",
+  "error_ticket_update": "Error updating ticket",
+  "error_purchase": "Error purchasing a ticket",
+  "error_ticket_allocations": "Error getting ticket allocations"
+}
