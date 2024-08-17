@@ -46,7 +46,7 @@ func init() {
 		Port: os.Getenv("APP_PORT"),
 	}
 
-	i18n.InitBundle("./internal/i18n/languages")
+	i18n.InitBundle("./internal/i18n/languages/")
 }
 
 func main() {
