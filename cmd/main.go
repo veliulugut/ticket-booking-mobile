@@ -3,6 +3,11 @@ package main
 import (
 	"context"
 	"database/sql"
+	"os"
+	"os/signal"
+	"sync"
+	"time"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/log"
 	"github.com/gofiber/fiber/v2/middleware/compress"
@@ -10,14 +15,11 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/gofiber/fiber/v2/middleware/recover"
 	"gorm.io/gorm"
-	"os"
-	"os/signal"
-	"sync"
+
 	"ticket-booking-app/cmd/api"
 	"ticket-booking-app/cmd/config"
 	"ticket-booking-app/internal/db/connection"
 	"ticket-booking-app/internal/i18n"
-	"time"
 )
 
 var (
@@ -65,7 +67,7 @@ func main() {
 
 	// Start listening on port 8000
 	go func() {
-		if err := app.Listen(":8000"); err != nil {
+		if err := app.Listen(":" + serveConf.Port); err != nil {
 			panic(err)
 		}
 	}()
